@@ -14,7 +14,7 @@ Answer 1) See jupyter notebook
 
 Question 2: For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
-  2a)How many orders were shipped by Speedy Express in total?
+  2a) How many orders were shipped by Speedy Express in total?
   
   SELECT count(ShipperID)  as [Total Orders Shipped] FROM Orders where ShipperID==1
   
@@ -58,10 +58,7 @@ ORDER BY COUNT(o.EmployeeID) Desc Limit 1
 Answer => Peacock
 ______________________________________
 
-2c)
-
-
-What product was ordered the most by customers in Germany?
+2c) What product was ordered the most by customers in Germany?
 
 
 SELECT  p.ProductName As [Most Ordered Product] 
