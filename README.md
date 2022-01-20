@@ -12,6 +12,9 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
   
 Answer 1) See jupyter notebook
 
+------------------------------------------
+
+
 Question 2: For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
   2a) How many orders were shipped by Speedy Express in total?
