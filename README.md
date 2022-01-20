@@ -5,13 +5,16 @@ Question 1: Given some sample data, write a program to answer the following: cli
 On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis. 
 
   a) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data. 
+  
   b) What metric would you report for this dataset?
+  
   c) What is its value?
+  
 Answer 1) See jupyter notebook
 
 Question 2: For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
-  a)How many orders were shipped by Speedy Express in total?
+  2a)How many orders were shipped by Speedy Express in total?
   
   SELECT count(ShipperID)  as [Total Orders Shipped] FROM Orders where ShipperID==1
   
@@ -22,13 +25,18 @@ Question 2: For this question you’ll need to use SQL. Follow this link to acce
   WHERE (SELECT ShipperID 
       FROM Shippers AS s
       WHERE s.ShipperName == "Speedy Express") == o.ShipperID;
-
-
-=> 54
+      
+ Answer => 54
+    
 --------
+
+2b) What is the last name of the employee with the most orders?
+
+
 What is the last name of the employee with the most orders?
 
-//solution 1
+// solution 1
+
 SELECT e.LastName
 FROM Employees AS e
 WHERE (SELECT o.EmployeeID
@@ -38,15 +46,20 @@ ORDER BY COUNT(o.EmployeeID) DESC
 LIMIT 1) == e.EmployeeID;
 
 Or 
+
 // solution 2
+
 SELECT e.LastName from Employees As e 
 JOIN Orders As o 
 ON e.EmployeeID = o.EmployeeID
 GROUP BY e.EmployeeID, e.LastName
 ORDER BY COUNT(o.EmployeeID) Desc Limit 1
 
-=> Peacock
+Answer => Peacock
 ______________________________________
+
+2c)
+
 
 What product was ordered the most by customers in Germany?
 
@@ -58,5 +71,5 @@ GROUP BY p.ProductID
 ORDER BY SUM(od.Quantity) desc
 Limit 1
 
-=>  Boston Crab Meat
+Answer =>  Boston Crab Meat
 
