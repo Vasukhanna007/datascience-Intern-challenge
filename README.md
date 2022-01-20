@@ -16,9 +16,13 @@ Question 2: For this question you’ll need to use SQL. Follow this link to acce
 
   2a) How many orders were shipped by Speedy Express in total?
   
+  //Solution 1
+  
   SELECT count(ShipperID)  as [Total Orders Shipped] FROM Orders where ShipperID==1
   
   or 
+  
+  //Solution 2
   
   SELECT COUNT(o.ShipperID)
   FROM Orders AS o
@@ -35,7 +39,7 @@ Question 2: For this question you’ll need to use SQL. Follow this link to acce
 
 What is the last name of the employee with the most orders?
 
-// solution 1
+// Solution 1
 
 SELECT e.LastName
 FROM Employees AS e
@@ -47,7 +51,7 @@ LIMIT 1) == e.EmployeeID;
 
 Or 
 
-// solution 2
+// Solution 2
 
 SELECT e.LastName from Employees As e 
 JOIN Orders As o 
