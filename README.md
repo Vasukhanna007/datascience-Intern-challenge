@@ -1,4 +1,4 @@
-# Data science Intern challenge
+# Data Science Intern challenge
 
 Question 1: Given some sample data, write a program to answer the following: click here to access the required data set
 
